@@ -19,7 +19,8 @@ jobs:
         java-version: '17'
 
     - name: Build with Maven
-      run: mvn -B clean package -Dmaven.test.skip=true
+      run: mvn --batch-mode clean package "-Dmaven.test.skip=true"
+
       
     - name: Trigger Jenkins Deployment Job
       run: |
